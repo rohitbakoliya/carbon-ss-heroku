@@ -39,7 +39,11 @@ const takeSS = async () => {
         data: code,
       }
     );
-    const buff = Buffer.from(resp.data.image, 'base64');
+    const imageBuffer = Buffer.from(resp.data.image, 'base64');
+    
+    // use this buffer to write or render images
+    fs.writeFileSync('example.png', imageBuffer);
+    const img = `<img src="data:image/jpeg;base64,${imageBuffer.toString('base64')}" >`
   } catch (err) {
     console.log(err);
   }
