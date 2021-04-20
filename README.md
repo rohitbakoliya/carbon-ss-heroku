@@ -1,6 +1,11 @@
 ## Carbon Screenshot from Heroku App
 
-A heroku app to take carbon screenshots (carbon.now.sh) of any code snippet.
+A heroku app to take carbon screenshots (https://carbon.now.sh) of any code snippet.
+
+### Buildpacks Needed
+
+* https://github.com/jontewks/puppeteer-heroku-buildpack
+* heroku/nodejs
 
 ### Usage
 
